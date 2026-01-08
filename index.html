@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="index">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>buy • sell • chat</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="card" style="padding:14px;">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <input class="input" id="q" placeholder="Suchen..." style="flex:1;min-width:200px;" />
+      <select class="input" id="cat"></select>
+      <select class="input" id="sort">
+        <option value="new">Neu</option>
+        <option value="price_asc">Preis ↑</option>
+        <option value="price_desc">Preis ↓</option>
+      </select>
+    </div>
+    <div class="hr"></div>
+    <div id="emptyHint" class="notice" style="display:none;">Keine Artikel gefunden.</div>
+    <div id="grid" class="grid"></div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="profile">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>profile</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="card" style="padding:16px;">
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;">
+      <div>
+        <div style="font-weight:1000;font-size:20px;" id="pName">—</div>
+        <div class="small-muted"><span id="pEmail">—</span> · <span id="pCity">—</span> · <span id="pRole">—</span></div>
+      </div>
+      <button class="btn btn-danger" id="btnReset" type="button">Alle Daten neu</button>
+    </div>
+
+    <div class="hr"></div>
+
+    <h3 style="margin:0 0 8px;">Meine Inserate</h3>
+    <div id="myListings"></div>
+
+    <div class="hr"></div>
+
+    <h3 style="margin:0 0 8px;">Meine Orders</h3>
+    <div id="myOrders"></div>
+
+    <div class="hr"></div>
+
+    <h3 style="margin:0 0 8px;">Meine Verkäufe</h3>
+    <div id="mySales"></div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

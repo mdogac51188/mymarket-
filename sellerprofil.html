@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verkäuferprofil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="seller">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>seller</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="row">
+    <div id="sellerHead"></div>
+
+    <div class="card" style="padding:14px;">
+      <div style="font-weight:900;">Bewertungen</div>
+      <div class="small-muted" id="sellerRatingHint" style="margin-top:6px;">—</div>
+      <div class="hr"></div>
+      <div id="sellerReviews"></div>
+
+      <div class="hr"></div>
+      <div style="font-weight:900;">Aktive Inserate</div>
+      <div class="hr"></div>
+      <div id="sellerListings"></div>
+    </div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

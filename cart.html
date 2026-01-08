@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warenkorb</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="cart">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>warenkorb</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="cart.html">🛒 Warenkorb (<span id="navCartCount">0</span>)</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="card" style="padding:16px;">
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;">
+      <div style="font-weight:1000;font-size:20px;">Warenkorb</div>
+      <div class="small-muted">Mehrere Artikel sammeln → dann Checkout.</div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div id="cartEmpty" class="notice" style="display:none;">Dein Warenkorb ist leer.</div>
+    <div id="cartList"></div>
+
+    <div class="hr"></div>
+
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;">
+      <div>
+        <div class="small-muted">Gesamt</div>
+        <div class="price" id="cartTotal">0,00 €</div>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn" id="btnClearCart" type="button">Warenkorb leeren</button>
+        <button class="btn btn-primary" id="btnCheckoutCart" type="button">Checkout</button>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+    <div class="notice">
+      Hinweis: Beim Checkout wird aktuell <b>pro Artikel</b> eine Order erstellt (wie „Kaufen“).
+      Danach kannst du die Orders nacheinander bezahlen.
+    </div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

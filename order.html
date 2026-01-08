@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="order">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>order</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="row">
+    <div class="card" style="padding:14px;">
+      <a id="oListingLink" class="btn" href="index.html">Zum Listing</a>
+      <div class="hr"></div>
+      <div id="oImg" class="img" style="height:260px;"></div>
+    </div>
+
+    <div class="card" style="padding:14px;">
+      <div id="oInfo" class="small-muted">—</div>
+      <div id="oTitle" style="font-weight:1000;font-size:22px;margin-top:6px;">—</div>
+      <div class="hr"></div>
+
+      <div class="price" id="oTotal">0,00 €</div>
+      <div class="small-muted" style="margin-top:6px;">Status: <span id="oStatus">—</span></div>
+      <div class="small-muted" style="margin-top:6px;">Seller: <span id="oSeller">—</span></div>
+      <div class="small-muted" style="margin-top:6px;">Buyer: <span id="oBuyer">—</span></div>
+
+      <div class="hr"></div>
+      <div id="orderTimeline" class="notice">Timeline: —</div>
+
+      <div class="hr"></div>
+      <div id="orderActions" style="display:flex;gap:10px;flex-wrap:wrap;"></div>
+    </div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

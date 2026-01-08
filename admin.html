@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="admin">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>admin</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="card" style="padding:16px;">
+    <h2 style="margin:0 0 10px;">Admin Panel</h2>
+
+    <div class="tabs">
+      <button class="tab active" id="tabUsers" type="button">Users</button>
+      <button class="tab" id="tabListings" type="button">Listings</button>
+      <button class="tab" id="tabOrders" type="button">Orders</button>
+      <button class="tab" id="tabCats" type="button">Kategorien</button>
+    </div>
+
+    <div class="hr"></div>
+    <div id="adminBox"></div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

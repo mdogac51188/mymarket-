@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inserat bearbeiten</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="edit">
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html">
+          <div class="logo"></div>
+          <div><div>MyMarket</div><small>buy • sell • chat</small></div>
+        </a>
+
+        <div class="nav-links">
+          <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+          <a class="btn" href="favorites.html">Favoriten</a>
+          <a class="btn" href="messages.html">Chats</a>
+          <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+
+          <a class="btn" id="navProfile" href="profile.html">Profil</a>
+          <a class="btn btn-primary" id="navSell" href="sell.html">Verkaufen</a>
+          <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+          <button class="btn" id="navLogout" style="display:none;">Logout</button>
+          <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="card" style="padding:18px;">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+        <div>
+          <h1 style="margin:0 0 6px;">Inserat bearbeiten</h1>
+          <div class="small-muted" id="editInfo">Lade…</div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a class="btn" id="backToListing" href="index.html">Zurück</a>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <form id="editForm">
+        <div class="label">Titel</div>
+        <input class="input" id="eTitle" required />
+
+        <div class="row">
+          <div>
+            <div class="label">Kategorie</div>
+            <select class="input" id="eCategory" required>
+              <option>Sneaker</option>
+              <option>Jacken</option>
+              <option>Gaming</option>
+              <option>Deko</option>
+              <option>Elektronik</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div>
+            <div class="label">Preis (€)</div>
+            <input class="input" id="ePrice" type="number" min="1" step="0.01" required />
+          </div>
+        </div>
+
+        <div class="label">Ort</div>
+        <input class="input" id="eCity" placeholder="z.B. Hildesheim" />
+
+        <div class="label">Beschreibung</div>
+        <textarea class="input" id="eDesc"></textarea>
+
+        <div class="hr"></div>
+
+        <div class="label">Bilder (max. 4)</div>
+        <div class="notice">Du kannst Bilder <b>löschen</b>, <b>umsortieren</b> und neue <b>hinzufügen</b>.</div>
+
+        <div id="editImages" class="edit-images"></div>
+
+        <div class="label" style="margin-top:12px;">Neue Bilder hinzufügen</div>
+        <input class="input" id="eAddImages" type="file" accept="image/*" multiple />
+
+        <div class="notice" style="margin-top:12px;">
+          Tipp: Wenn du zu viele Bilder auswählst, werden nur die ersten bis max. 4 gespeichert.
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <button class="btn btn-primary" type="submit">Speichern</button>
+          <a class="btn" id="cancelEdit" href="profile.html">Abbrechen</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

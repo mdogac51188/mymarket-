@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nachrichten</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="messages">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>messages</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="row" style="grid-template-columns: 0.8fr 1.2fr;">
+    <div class="card" style="padding:14px;">
+      <div style="font-weight:900;">Chats</div>
+      <div class="hr"></div>
+      <div id="chatList"></div>
+    </div>
+
+    <div class="card" style="padding:14px;display:flex;flex-direction:column;gap:10px;">
+      <div style="font-weight:900;" id="chatHead">Chat</div>
+      <div class="hr"></div>
+      <div id="chatMsgs" style="flex:1;min-height:260px;max-height:420px;overflow:auto;"></div>
+      <div style="display:flex;gap:10px;">
+        <input class="input" id="chatText" placeholder="Nachricht..." />
+        <button class="btn btn-primary" id="chatSend" type="button">Senden</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="login">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>login</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="row">
+    <div class="card" style="padding:16px;">
+      <h2 style="margin:0 0 10px;">Anmelden</h2>
+      <div class="notice">Demo Admin: <b>admin@test.de</b> / <b>12345678</b></div>
+      <div class="notice">Demo Seller: <b>mehmet@test.de</b> / <b>12345678</b></div>
+      <div class="notice">Demo Buyer: <b>buyer@test.de</b> / <b>12345678</b></div>
+
+      <form id="loginForm" style="margin-top:12px;">
+        <input class="input" id="lemail" placeholder="Email" />
+        <input class="input" id="lpass" placeholder="Passwort" type="password" />
+        <button class="btn btn-primary" type="submit">Login</button>
+      </form>
+      <div class="small-muted" id="loginMsg" style="margin-top:10px;"></div>
+    </div>
+
+    <div class="card" style="padding:16px;">
+      <h2 style="margin:0 0 10px;">Registrieren</h2>
+      <form id="registerForm">
+        <input class="input" id="rname" placeholder="Name" />
+        <input class="input" id="rcity" placeholder="Stadt" />
+        <input class="input" id="remail" placeholder="Email" />
+        <input class="input" id="rpass" placeholder="Passwort" type="password" />
+        <select class="input" id="rrole">
+          <option value="buyer">buyer</option>
+          <option value="seller">seller</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Account erstellen</button>
+      </form>
+      <div class="small-muted" id="registerMsg" style="margin-top:10px;"></div>
+    </div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

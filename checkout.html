@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="checkout">
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div><div><b>MyMarket</b></div><small>checkout</small></div>
+      </a>
+
+      <div class="nav-links">
+        <button class="btn" id="themeToggle" type="button">☀️ Light</button>
+        <a class="btn" href="index.html">Start</a>
+        <a class="btn" href="favorites.html">Favoriten</a>
+        <a class="btn" href="messages.html">Chats</a>
+        <a class="btn" href="offers.html">💸 Angebote</a>
+
+        <a class="btn" id="navAdmin" href="admin.html" style="display:none;">Admin</a>
+        <a class="btn" id="navProfile" href="profile.html">Profil</a>
+        <a class="btn btn-primary" id="navSell" href="sell.html" style="display:none;">Verkaufen</a>
+        <a class="btn" id="navLogin" href="login.html">Anmelden</a>
+        <button class="btn" id="navLogout" style="display:none;">Logout</button>
+        <span class="btn" id="navUser" style="cursor:default;">Gast</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="row">
+    <div class="card" style="padding:14px;">
+      <div id="coImg" class="img" style="height:260px;"></div>
+    </div>
+
+    <div class="card" style="padding:14px;">
+      <div id="coInfo" class="small-muted">—</div>
+      <div id="coTitle" style="font-weight:1000;font-size:22px;margin-top:6px;">—</div>
+      <div class="hr"></div>
+      <div class="price" id="coTotal">0,00 €</div>
+      <div class="small-muted" style="margin-top:6px;">Status: <span id="coStatus">—</span></div>
+
+      <div class="hr"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-primary" id="btnPay" type="button">Bezahlen</button>
+        <button class="btn btn-danger" id="btnCancelOrder" type="button">Stornieren</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
